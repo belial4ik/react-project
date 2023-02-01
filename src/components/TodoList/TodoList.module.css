@@ -1,0 +1,15 @@
+.todoList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.todoList h3 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.todoList span {
+  font-size: 20px;
+  font-weight: 100;
+  color: red;
+}

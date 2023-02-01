@@ -1,0 +1,10 @@
+.header {
+  background-color: #b2bec3;
+  height: 60px;
+}
+
+.header h2 {
+  padding-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
