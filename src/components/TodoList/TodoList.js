@@ -5,10 +5,10 @@ const TodoList = props => {
   return (
     <>
       {
-        props.todos.map(todo => (
-          <div key={todo.id} className={`${classes.todoList} container`}>
-            <h3>{todo.title}</h3>
-            <span><AiFillDelete /></span>
+        props.todos.map(({ id, title }) => (
+          <div key={id} className={`${classes.todoList} container`}>
+            <h3>{title}</h3>
+            <span onClick={() => props.onDelete(id)} ><AiFillDelete /></span>
           </div>
         ))
       }
