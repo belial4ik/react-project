@@ -1,11 +1,16 @@
 .todoList {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 5px;
+  border-bottom: .5px solid #b2bec3;
+  padding: 0 15px;
 }
 
 .todoList h3 {
+  font-family: 'Roboto', sans-serif;
   font-size: 22px;
-  font-weight: normal;
+  font-weight: 800;
+  letter-spacing: 5px;
 }
 
 .todoList span {
