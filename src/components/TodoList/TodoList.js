@@ -5,9 +5,11 @@ const TodoList = props => {
   return (
     <>
       {
-        props.todos.map(({ id, title }) => (
+        props.todos.map(({ id, title, isComplete }) => (
           <div key={id} className={`${classes.todoList} container`}>
-            <h3>{title}</h3>
+            <h3
+              onClick={() => props.onComplete(id)}
+            >{title}</h3>
             <span onClick={() => props.onDelete(id)} ><AiFillDelete /></span>
           </div>
         ))

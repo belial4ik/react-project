@@ -23,7 +23,6 @@ function App() {
       setTodos(newTodos)
     } else {
       alert('от 1 до 20 символов')
-      setTodoText('')
     }
     setTodoText('')
   }
@@ -32,6 +31,16 @@ function App() {
   const todoDeleteHandler = id => {
     const todosCopy = todos.filter(todo => todo.id !== id)
     setTodos(todosCopy)
+  }
+
+  //complete handler
+  const isCompleteHandler = id => {
+    todos.map((todo) => {
+      if (todo.id != id) {
+        todo.isCompleted = !todo.isCompleted
+      }
+    })
+    setTodos(todos)
   }
 
   return (
@@ -46,6 +55,7 @@ function App() {
         <TodoList
           todos={todos}
           onDelete={todoDeleteHandler}
+          onComplete={isCompleteHandler}
         />
       </div>
     </div>
