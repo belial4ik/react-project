@@ -6,8 +6,8 @@ const TodoList = props => {
     <>
       {
         props.todos.map(({ id, title, time, isComplete }) => (
-          <div className={`${classes.todoList} container`}>
-            <div key={id}>
+          <div key={id} className={`${classes.todoList} container`}>
+            <div>
               <h3 onClick={() => props.onComplete(id)}>{title}</h3>
             </div>
             <div>
