@@ -19,8 +19,6 @@ function App() {
 
     if (todoText.length > 0 && todoText.length < 21 && todoText.trim() !== '') {
       setTodos(newTodos)
-    } else {
-      alert('can`t be empty and contain from 1 - 20 symbols')
     }
     setTodoText('')
   }

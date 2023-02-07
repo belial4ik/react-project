@@ -16,9 +16,26 @@
 
 ::placeholder {
   color: #2d3436;
+  opacity: .5;
 }
 
 .formControl form button {
   height: 30px;
   width: 50px;
+  background-color: #74b9ff;
+  border: none;
+  border-radius: 5px;
+}
+
+.formControl form button:disabled {
+  background-color: #ccc;
+  color:black;
+}
+
+.inputRed {
+  color: red;
+}
+
+.inputDefault {
+  color: #000;
 }
