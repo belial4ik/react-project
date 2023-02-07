@@ -24,6 +24,7 @@
 .deleteBtn:hover {
   color:red;
   opacity: 1;
+  cursor: pointer;
 }
 
 .timeOfTodo {
