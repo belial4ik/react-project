@@ -1,11 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import TodoForm from './components/TodoForm/TodoForm';
 import TodoList from './components/TodoList/TodoList';
 
 function App() {
   const [todoText, setTodoText] = useState('')
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(() => {
+    const savedTodos = localStorage.getItem("todos");
+    if (savedTodos) {
+      return JSON.parse(savedTodos)
+    } else {
+      return []
+    }
+  })
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
 
   //Submit form
   const submitForm = event => {
